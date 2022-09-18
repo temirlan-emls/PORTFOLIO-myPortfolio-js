@@ -19,7 +19,7 @@ const AboutMeBlock = () => {
             whileInView="visible"
             variants={bgAmin}
             viewport={{ amount: 0.2 }}
-            className="w-full h-screen flex justify-end select-none bg-myBlack"
+            className="w-full h-screen flex justify-end select-none bg-myCyan"
         ></motion.div>
     );
 };

@@ -23,32 +23,31 @@ const SalemBlock = () => {
         },
     };
     return (
-        <div className="w-full h-screen flex justify-end select-none">
+        <div className="w-full h-screen grid lg:grid-cols-2 xs:grid-rows-2 select-none relative">
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ amount: 0.5 }}
-                className="h-screen mx-auto lg:max-w-6xl md:max-w-3xl xs:max-w-xl flex justify-center items-center "
+                viewport={{ amount: 0.5, once: true }}
+                className="lg:h-screen mx-auto lg:max-w-6xl md:max-w-3xl xs:max-w-xl flex justify-center items-center "
+            >
+                <motion.h2
+                    variants={textAmin}
+                    className="font-myFont lg:text-8xl md:text-6xl sm:text-6xl xs:text-4xl text-myGray"
+                >
+                    Salem, Alem!
+                </motion.h2>
+            </motion.div>
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.5, once: true }}
+                className="lg:h-screen mx-auto lg:max-w-6xl md:max-w-3xl xs:max-w-xl flex justify-center items-center "
             >
                 <motion.h2
                     variants={handAmin}
                     className="font-myFont lg:text-10xl md:text-9xl sm:text-8xl xs:text-7xl"
                 >
                     &#128075;
-                </motion.h2>
-            </motion.div>
-
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.5 }}
-                className="h-screen mx-auto lg:max-w-6xl md:max-w-3xl xs:max-w-xl flex justify-center items-center "
-            >
-                <motion.h2
-                    variants={textAmin}
-                    className="font-myFont lg:text-8xl md:text-6xl sm:text-6xl xs:text-4xl"
-                >
-                    Salem, Alem!
                 </motion.h2>
             </motion.div>
         </div>
