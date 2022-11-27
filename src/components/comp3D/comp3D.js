@@ -7,11 +7,7 @@ function Comp3D() {
     softShadows();
     return (
         <>
-            <Canvas
-                shadows
-                colorManagement
-                camera={{ position: [-5, 2, 10], fov: 60 }}
-            >
+            <Canvas shadows camera={{ position: [-5, 2, 10], fov: 60 }}>
                 <ambientLight intensity={0.3} />
                 <directionalLight
                     castShadow

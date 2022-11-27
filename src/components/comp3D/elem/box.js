@@ -11,7 +11,7 @@ const Box = ({ position = [] }) => {
     }, []);
     return (
         <mesh position={position} ref={ref} castShadow>
-            <boxGeometry args={[1, 2, 2]} />
+            <boxGeometry args={[1, 4, 2]} />
             <meshStandardMaterial map={crate} />
         </mesh>
     );

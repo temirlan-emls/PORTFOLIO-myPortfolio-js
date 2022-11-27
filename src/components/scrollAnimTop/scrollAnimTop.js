@@ -12,7 +12,7 @@ const ScrollAnimTop = () => {
                 duration: 7,
             }}
             style={{ scaleX }}
-            className="w-full h-2 fixed top-0 left-0 right-0 bg-myYellow"
+            className="w-full h-2 fixed top-0 left-0 right-0 bg-slate-600 z-50"
         ></motion.div>
     );
 };

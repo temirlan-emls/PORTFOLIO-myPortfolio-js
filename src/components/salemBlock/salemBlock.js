@@ -1,56 +1,51 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { textEnterSalem, textLeave } from "../../store/slices/cursorSlice";
+import { useDispatch } from "react-redux";
 
 const SalemBlock = () => {
-    const textAmin = {
+    const dispatch = useDispatch();
+
+    const BgColorAnim = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { duration: 2, type: "spring", delay: 1 },
+        },
+    };
+    const SalemAnim = {
         hidden: { y: 150, opacity: 0 },
         visible: {
             y: 0,
             opacity: 1,
-            transition: { duration: 3, type: "spring" },
+            transition: { duration: 3, type: "spring", delay: 2 },
         },
     };
-    const handAmin = {
-        hidden: { y: -200, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            rotate: [-20, 40],
-            transition: {
-                duration: 2,
-                type: "spring",
-            },
-        },
-    };
+
     return (
-        <div className="w-full h-screen grid lg:grid-cols-2 xs:grid-rows-2 select-none relative">
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={BgColorAnim}
+            className="w-full h-screen grid select-none relative bg-yellow-300"
+        >
             <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ amount: 0.5, once: true }}
-                className="lg:h-screen mx-auto lg:max-w-6xl md:max-w-3xl xs:max-w-xl flex justify-center items-center "
+                className="lg:h-screen mx-auto lg:max-w-6xl md:max-w-3xl xs:max-w-xl flex justify-center items-center"
             >
                 <motion.h2
-                    variants={textAmin}
-                    className="font-myFont lg:text-8xl md:text-6xl sm:text-6xl xs:text-4xl text-myGray"
+                    variants={SalemAnim}
+                    className="font-myFont font-bold lg:text-9xl md:text-7xl sm:text-7xl xs:text-4xl text-slate-700"
+                    onMouseEnter={() => dispatch(textEnterSalem())}
+                    onMouseLeave={() => dispatch(textLeave())}
                 >
                     Salem, Alem!
                 </motion.h2>
             </motion.div>
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.5, once: true }}
-                className="lg:h-screen mx-auto lg:max-w-6xl md:max-w-3xl xs:max-w-xl flex justify-center items-center "
-            >
-                <motion.h2
-                    variants={handAmin}
-                    className="font-myFont lg:text-10xl md:text-9xl sm:text-8xl xs:text-7xl"
-                >
-                    &#128075;
-                </motion.h2>
-            </motion.div>
-        </div>
+        </motion.div>
     );
 };
 

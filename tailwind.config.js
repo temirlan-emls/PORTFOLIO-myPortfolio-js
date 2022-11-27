@@ -5,17 +5,13 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                myWhite: "#FFFFFF",
-                myBlack: "#0f172a",
-                myGray: "#e2e8f0",
-                myPurple: "#A64AC9",
-                myYellow: "#FCCD04",
-                myPink: "#FFB48F",
-                myAmber: "#F5E6CC",
-                myCyan: "#17E9E0",
+                myYellow: "#FFFF3A",
             },
             fontFamily: {
-                myFont: ["Barlow", "sans-serif"],
+                myFont: [
+                    "Alexandria",
+                    "sans",
+                ],
             },
             screens: {
                 xs: { max: "575px" }, // Mobile (iPhone 3 - iPhone XS Max).
