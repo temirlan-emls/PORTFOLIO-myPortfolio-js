@@ -25,12 +25,15 @@ const CardBlock = forwardRef(({ item }, ref) => {
     return (
         <motion.div
             className={`w-full flex flex-col items-center rounded-md shadow-lg bg-gradient-to-br from-[#93a5cf] to-[#e4efe9] relative pb-32`}
-            drag
             ref={ref}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 1.1 }}
         >
-            <img src={item.img} alt={item.title} className="mt-5 w-11/12 rounded-lg"  />
+            <img
+                src={item.img}
+                alt={item.title}
+                className="mt-5 w-11/12 rounded-lg"
+            />
             <a
                 href={item.link}
                 className="underline underline-offset-4 font-bold w-10/12 text-center cursor-none lg:text-2xl md:text-xl sm:text-xl xs:text-lg mt-5"
