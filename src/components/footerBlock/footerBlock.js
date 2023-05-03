@@ -15,7 +15,7 @@ const FooterBlock = () => {
             whileInView="visible"
             viewport={{ amount: 0.5 }}
             variants={footerDivAmin}
-            className="w-full h-96 bg-myBlack"
+            className="w-full h-96 bg-myBlack snap-end"
         >
             <motion.div
                 className="w-full h-2"

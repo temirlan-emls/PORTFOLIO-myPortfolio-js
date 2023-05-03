@@ -1,8 +1,30 @@
 [
     {
-        "title": "Contacts",
-        "style": {
-            "border": "border border-red"
-        }
+        "title": "EtchASketch",
+        "img": "https://iili.io/HSlLZjj.png",
+        "link": "https://pet-etch-a-sketch-css.vercel.app/",
+        "description": "Simple drawing app. Stack: HTML, CSS, JavaScript.",
+        "stack": ["SiCss3", "SiHtml5", "SiJavascript"]
+    },
+    {
+        "title": "Price app",
+        "img": "https://iili.io/HSaTYS1.png",
+        "link": "https://kitchen-price-app-react.vercel.app/",
+        "description": "React application, which displays data from JSON file (database). Search, filtering and adding to cart logic is implemented on the frontend. Stack: React, TypeScript, Bootstrap",
+        "stack": ["SiBootstrap", "SiTypescript", "SiReact"]
+    },
+    {
+        "title": "Fake Store",
+        "img": "https://iili.io/HSaBpyv.png",
+        "link": "https://just-code-final-project.vercel.app/",
+        "description": "E-commerse site. FakeStoreApi used as main API. Redux Toolkit used for liked items and cart",
+        "stack": ["SiTailwindcss", "SiReact", "SiRedux"]
+    },
+    {
+        "title": "Ecommerce site backend + file gen",
+        "img": "https://iili.io/HSazTOb.png",
+        "link": "/",
+        "description": "Django application, which gives API for frontend by Django REST framework. Also, this application can create XLSX file by data from frontend. In main branch dockerized version, also on docker version on other branch",
+        "stack": ["SiDjango", "SiPython"]
     }
 ]

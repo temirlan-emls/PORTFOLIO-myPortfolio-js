@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 const Cursor = () => {
     const cursorStatus = useSelector((state) => state.cursor.cursorStatus);
@@ -31,7 +31,7 @@ const Cursor = () => {
             y: mousePosition.y - 12,
             borderRadius: "100%",
         },
-        onTextSalem: {
+        onText: {
             width: 128,
             height: 128,
             x: mousePosition.x - 64,
@@ -40,16 +40,16 @@ const Cursor = () => {
             backgroundColor: "rgb(255,255,255)",
             borderRadius: "100%",
         },
-        onTextName: {
+        onLink: {
             width: 128,
             height: 128,
             x: mousePosition.x - 64,
             y: mousePosition.y - 64,
             mixBlendMode: "difference",
-            backgroundColor: "rgb(255,255,255)",
-            borderRadius: "100%",
+            backgroundColor: "rgb(255,255,80)",
+            borderRadius: "10%",
         },
-        on3D: {
+        onDrag: {
             x: mousePosition.x - 12,
             y: mousePosition.y - 12,
             borderRadius: "100%",
@@ -61,7 +61,7 @@ const Cursor = () => {
         <motion.div
             variants={cursorAnim}
             animate={cursorStatus}
-            className="h-6 w-6 bg-slate-800 fixed z-50 pointer-events-none"
+            className="h-6 w-6 bg-slate-800 fixed z-50 pointer-events-none md:hidden sm:hidden xs:hidden"
         ></motion.div>
     );
 };

@@ -8,14 +8,14 @@ export const cursorSlice = createSlice({
     name: "cursor",
     initialState,
     reducers: {
-        enter3D: (state) => {
-            state.cursorStatus = "on3D";
+        enterDrag: (state) => {
+            state.cursorStatus = "onDrag";
         },
-        textEnterSalem: (state) => {
-            state.cursorStatus = "onTextSalem";
+        enterText: (state) => {
+            state.cursorStatus = "onText";
         },
-        textEnterName: (state) => {
-            state.cursorStatus = "onTextName";
+        onLink: (state) => {
+            state.cursorStatus = "onLink";
         },
         textLeave: (state) => {
             state.cursorStatus = "default";
@@ -23,7 +23,6 @@ export const cursorSlice = createSlice({
     },
 });
 
-export const { textEnterSalem, textEnterName, enter3D, textLeave } =
-    cursorSlice.actions;
+export const { enterText, onLink, enterDrag, textLeave } = cursorSlice.actions;
 
 export default cursorSlice.reducer;

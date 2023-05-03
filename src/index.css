@@ -1,6 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: #ae8b9c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(51, 65, 85);
+}
+
+::-webkit-scrollbar-corner {
+    background: rgb(255, 255, 255);
+}
 

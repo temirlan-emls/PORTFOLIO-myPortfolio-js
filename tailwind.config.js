@@ -4,14 +4,14 @@ module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
         extend: {
+            backgroundImage: {
+                hero: "url('../public/images/logo.png')",
+            },
             colors: {
                 myYellow: "#FFFF3A",
             },
             fontFamily: {
-                myFont: [
-                    "Alexandria",
-                    "sans",
-                ],
+                myFont: ["Alexandria", "sans"],
             },
             screens: {
                 xs: { max: "575px" }, // Mobile (iPhone 3 - iPhone XS Max).
