@@ -12,7 +12,7 @@ const ProjectsBlock = () => {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: { duration: 2, type: 'spring' },
+            transition: { duration: 2, type: 'spring'},
         },
     };
     return (
@@ -24,7 +24,7 @@ const ProjectsBlock = () => {
                 variants={BgColorAnim}
                 className="w-full min-h-screen select-none flex flex-col items-center justify-between bg-gradient-to-tr from-[#ae8b9c] via-[#8baaaa] to-[#8baaaa]"
             >
-                <div className="my-12 w-full flex flex-col items-center justify-center snap-start">
+                <div className="my-12 pt-4 w-full flex flex-col items-center justify-center snap-start">
                     <motion.h2
                         onMouseEnter={() => dispatch(enterText())}
                         onMouseLeave={() => dispatch(textLeave())}

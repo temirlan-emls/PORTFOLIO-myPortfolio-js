@@ -12,12 +12,9 @@ import {
     SiDjango,
     SiPython,
 } from 'react-icons/si';
-import { onLink, textLeave } from '../../store/slices/cursorSlice';
-import { useDispatch } from 'react-redux';
+import CustomLink from '../customLink/customLink';
 
 const CardBlock = forwardRef(({ item }, ref) => {
-    const dispatch = useDispatch();
-
     const isInPortfolio = (arr, tech) => {
         return arr.filter((item) => item === tech).length >= 1 ? '' : 'hidden';
     };
@@ -34,14 +31,13 @@ const CardBlock = forwardRef(({ item }, ref) => {
                 alt={item.title}
                 className="mt-5 w-11/12 rounded-lg"
             />
-            <a
-                href={item.link}
-                className="underline underline-offset-4 font-bold w-10/12 text-center cursor-none lg:text-2xl md:text-xl sm:text-xl xs:text-lg mt-5"
-                onMouseEnter={() => dispatch(onLink())}
-                onMouseLeave={() => dispatch(textLeave())}
-            >
-                {item.title}
-            </a>
+            <CustomLink
+                link={item.link}
+                text={item.title}
+                styleProp={
+                    'underline underline-offset-4 font-bold w-10/12 text-center lg:text-2xl md:text-xl sm:text-xl xs:text-lg mt-5'
+                }
+            />
             <p className="w-11/12 mt-12 mb-4">{item.description}</p>
             <div className="flex flex-col items-center my-4 w-full absolute bottom-0">
                 <p className="mb-4">tech stack</p>

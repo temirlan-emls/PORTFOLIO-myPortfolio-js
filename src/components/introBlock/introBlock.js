@@ -48,7 +48,7 @@ const IntroBlock = () => {
 
     const BgColorAnim = {
         hidden: { opacity: 0 },
-        visible: {
+        visible: { 
             opacity: 1,
             transition: { duration: 2, type: 'spring', delay: 1 },
         },

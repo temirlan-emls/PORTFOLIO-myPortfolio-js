@@ -1,8 +1,8 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 const Cursor = () => {
     const cursorStatus = useSelector((state) => state.cursor.cursorStatus);
@@ -19,9 +19,9 @@ const Cursor = () => {
                 y: e.clientY,
             });
         };
-        window.addEventListener("mousemove", moveMouse);
+        window.addEventListener('mousemove', moveMouse);
         return () => {
-            window.removeEventListener("mousemove", moveMouse);
+            window.removeEventListener('mousemove', moveMouse);
         };
     }, []);
 
@@ -29,30 +29,30 @@ const Cursor = () => {
         default: {
             x: mousePosition.x - 12,
             y: mousePosition.y - 12,
-            borderRadius: "100%",
+            borderRadius: '100%',
         },
         onText: {
             width: 128,
             height: 128,
             x: mousePosition.x - 64,
             y: mousePosition.y - 64,
-            mixBlendMode: "difference",
-            backgroundColor: "rgb(255,255,255)",
-            borderRadius: "100%",
+            mixBlendMode: 'difference',
+            backgroundColor: 'rgb(255,255,255)',
+            borderRadius: '100%',
         },
         onLink: {
-            width: 128,
-            height: 128,
-            x: mousePosition.x - 64,
-            y: mousePosition.y - 64,
-            mixBlendMode: "difference",
-            backgroundColor: "rgb(255,255,80)",
-            borderRadius: "10%",
+            width: 48,
+            height: 48,
+            x: mousePosition.x - 24,
+            y: mousePosition.y - 24,
+            mixBlendMode: 'difference',
+            backgroundColor: 'rgb(255,255,80)',
+            borderRadius: '10%',
         },
         onDrag: {
             x: mousePosition.x - 12,
             y: mousePosition.y - 12,
-            borderRadius: "100%",
+            borderRadius: '100%',
             opacity: 0.35,
         },
     };
