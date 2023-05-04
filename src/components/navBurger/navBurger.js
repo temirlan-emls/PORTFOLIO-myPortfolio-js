@@ -39,18 +39,22 @@ const NavBurger = () => {
                     onClick={() => setIsOpened(!isOpened)}
                 >
                     <div
-                        className={`w-12 h-1 bg-slate-800 ${
-                            isOpened ? 'rotate-45 translate-y-5' : 'rotate-0'
+                        className={`xs:w-8 sm:w-8 md:w-12 lg:w-12 h-1 bg-slate-800 ${
+                            isOpened
+                                ? 'rotate-45 xs:translate-y-3 sm:translate-y-3 md:translate-y-5 lg:translate-y-5'
+                                : 'rotate-0'
                         }`}
                     />
                     <div
-                        className={`w-12 h-1 bg-slate-800 my-4 ${
+                        className={`xs:w-8 sm:w-8 md:w-12 lg:w-12 xs:my-2 sm:my-2 md:my-4 lg:my-4 h-1 bg-slate-800  ${
                             isOpened ? 'opacity-0' : 'opacity-100'
                         }`}
                     />
                     <div
-                        className={`w-12 h-1 bg-slate-800 ${
-                            isOpened ? '-rotate-45 -translate-y-5' : 'rotate-0'
+                        className={`xs:w-8 sm:w-8 md:w-12 lg:w-12 h-1 bg-slate-800 ${
+                            isOpened
+                                ? '-rotate-45  xs:-translate-y-3 sm:-translate-y-3 md:-translate-y-5 lg:-translate-y-5'
+                                : 'rotate-0'
                         }`}
                     />
                 </button>
@@ -64,7 +68,7 @@ const NavBurger = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 1.5 }}
-                        className="h-2/5 xs:w-3/5  sm:w-3/5 md:w-2/5 lg:w-1/4  bg-emerald-300/10 backdrop-blur-lg rounded-2xl flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40"
+                        className="xs:h-2/4  sm:h-2/5 md:h-2/5 lg:h-2/5 xs:w-3/5 sm:w-2/5 md:w-1/5 lg:w-1/4  bg-emerald-300/10 backdrop-blur-lg rounded-2xl flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40"
                     >
                         <h2 className="mt-12 text-2xl font-bold">Navigation</h2>
                         <ul className="flex flex-col items-center">
@@ -104,13 +108,13 @@ const NavBurger = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 1 }}
-                        className=" xs:w-3/5  sm:w-3/5 md:w-2/5 lg:w-1/4 h-2/5 bg-emerald-300/10  backdrop-blur-lg rounded-2xl flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 scale-105"
+                        className=" xs:w-3/5 sm:w-2/5 md:w-1/5 lg:w-1/4 xs:h-2/4 sm:h-2/5 md:h-2/5 lg:h-2/5 bg-emerald-300/10  backdrop-blur-lg rounded-2xl flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 scale-105"
                     ></motion.div>
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
-                        className="xs:w-3/5  sm:w-3/5 md:w-2/5 lg:w-1/4 h-2/5 bg-emerald-100/10 backdrop-blur-lg rounded-2xl flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 scale-110"
+                        className="xs:w-3/5 sm:w-2/5 md:w-1/5 lg:w-1/4 xs:h-2/4 sm:h-2/5 md:h-2/5 lg:h-2/5 bg-emerald-100/10 backdrop-blur-lg rounded-2xl flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 scale-110"
                     ></motion.div>
                 </motion.div>
             </div>
