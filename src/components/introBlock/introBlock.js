@@ -48,7 +48,7 @@ const IntroBlock = () => {
 
     const BgColorAnim = {
         hidden: { opacity: 0 },
-        visible: { 
+        visible: {
             opacity: 1,
             transition: { duration: 2, type: 'spring', delay: 1 },
         },
@@ -59,7 +59,7 @@ const IntroBlock = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={BgColorAnim}
-            className="snap-center w-full h-screen grid lg:grid-cols-2 xs:grid-rows-2 select-none relative bg-gradient-to-bl from-[#ae8b9c] via-[#8baaaa] to-[#8baaaa]"
+            className="snap-start w-full h-screen grid lg:grid-cols-2 xs:grid-rows-2 select-none relative bg-gradient-to-bl from-[#ae8b9c] via-[#8baaaa] to-[#8baaaa]"
             ref={constraintsRef}
         >
             <motion.div
