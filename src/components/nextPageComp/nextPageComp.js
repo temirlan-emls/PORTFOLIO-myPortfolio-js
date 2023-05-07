@@ -8,7 +8,7 @@ const NextPageComp = ({ link, pageName }) => {
         <motion.div
             initial="hidden"
             whileHover="visible"
-            className="w-full h-8 bg-red-100 snap-end transition-all duration-300 ease-in-out hover:bg-slate-800 hover:text-white"
+            className="w-full h-8 bg-red-100 snap-end transition-all duration-300 ease-in-out hover:bg-slate-800 hover:text-white focus:bg-slate-800 focus:text-white"
         >
             <Link
                 className="w-full h-full flex justify-center items-center font-bold"
